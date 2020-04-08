@@ -1,0 +1,29 @@
+number = [1, 19, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+print("before", number)  #before [1, 19, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+#remove odd numbers from list
+def findeven(number):
+    itr=0
+    while(itr!=len(number)):
+        if(number[itr]%2!=0):
+            number.remove(number[itr])
+        else:
+             itr+=1
+    print("inside even",number)   #inside even [4, 6, 8, 10, 12, 14]
+    
+#remove even numbers from list
+def findodd(number):
+    itr=0
+    while(itr!=len(number)):
+        if(number[itr]%2==0):
+            number.remove(number[itr])
+        else:
+            itr+=1
+    print("inside odd",number)  #inside odd []
+
+
+findeven(number)
+print("outside", number)  #outside [4, 6, 8, 10, 12, 14]
+
+findodd(number)
+print("outside",number)   #outside []
